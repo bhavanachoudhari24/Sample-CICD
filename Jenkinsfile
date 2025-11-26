@@ -1,12 +1,10 @@
 pipeline{
-    agent {
-        label "ubuntu-server"
-    }
+    agent any
     stages{
         stage("checkout"){
             steps{
             echo "code checkout"
-            git url:"https://github.com/bhavanachoudhari24/django-notes-app.git", branch:"main"
+            git url:"https://github.com/bhavanachoudhari24/Sample-CICD.git", branch:"main"
             echo "code checkout successful"
         }}
         stage ("build"){
